@@ -1,0 +1,12 @@
+labeled/**
+labeled_resized/**
+labeled_resized_subset/**
+labeled2/**
+OneDrive - Ajou University/**
+한국형 사물 이미지/**
+picked_classes/**
+picked_classes_desc/**
+model.pth
+
+.vscode/**
+__pycache__/**

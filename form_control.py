@@ -2,7 +2,7 @@ from make_model import *
 from setting import *
 from PIL  import Image
 import googletrans
-
+from classes import classes
 
 class Control():
     def __init__(self):
@@ -60,8 +60,7 @@ class Control():
         
         pred = self.model(image_tensor.to(device))
 
-        whole_data = get_dataset_from_dir(self.data_dir, self.transform)
-        pred_class = whole_data.classes[torch.max(pred, 1)[1][0]]
+        pred_class = classes[torch.max(pred, 1)[1][0]]
         desc_file = open(self.desc_dir + pred_class+".txt", 'r', encoding="UTF8")
         self.desc = self.desc_dir + pred_class
 
